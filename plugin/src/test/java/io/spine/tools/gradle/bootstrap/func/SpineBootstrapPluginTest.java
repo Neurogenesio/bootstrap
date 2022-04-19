@@ -35,7 +35,6 @@ import io.spine.testing.TempDir;
 import io.spine.tools.gradle.testing.GradleProject;
 import org.gradle.testkit.runner.BuildResult;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -56,7 +55,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SlowTest
-@Disabled("Disabled until Spine 1.8.0 migration")
 @DisplayName("`io.spine.tools.gradle.bootstrap` plugin should")
 class SpineBootstrapPluginTest {
 
