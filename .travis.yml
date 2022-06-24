@@ -12,6 +12,9 @@ before_install:
   - chmod +x ./config/scripts/publish-artifacts.sh
   - chmod +x ./config/scripts/update-apt.sh
   - ./config/scripts/update-apt.sh
+  - sudo apt-get install dart
+  - pub global activate protoc_plugin
+  - pub global activate dart_code_gen
 
 script:
   - ./gradlew check --stacktrace
