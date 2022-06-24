@@ -13,8 +13,8 @@ before_install:
   - chmod +x ./config/scripts/update-apt.sh
   - ./config/scripts/update-apt.sh
   - sudo apt-get install dart
-  - flutter pub global activate protoc_plugin
-  - flutter pub global activate dart_code_gen
+  - dart pub global activate protoc_plugin
+  - dart pub global activate dart_code_gen
 
 script:
   - ./gradlew check --stacktrace
