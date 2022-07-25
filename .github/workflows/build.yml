@@ -1,0 +1,30 @@
+name: Build under Ubuntu
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 8
+          distribution: zulu
+          cache: gradle
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Install global Dart dependencies
+        run: |
+          dart pub global activate protoc_plugin
+          dart pub global activate dart_code_gen
+
+      - name: Run tests
+        run: ./gradlew check --stacktrace

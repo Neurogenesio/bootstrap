@@ -1,11 +1,8 @@
 # Spine bootstrap fork
 
-[![Build Status][badge]](https://travis-ci.com/SpineEventEngine/bootstrap)
-
-The fork of [Spine bootstrap plugin][bootstrap-gh-link] which accommodates changes that couldn't be 
+The fork of [Spine bootstrap plugin][bootstrap-gh-link] which accommodates changes that couldn't be
 applied to the plugin itself but are needed by Neurogenesio projects.
 
-[badge]: https://travis-ci.com/SpineEventEngine/bootstrap.svg?branch=master
 [bootstrap-gh-link]: https://github.com/SpineEventEngine/bootstrap
 
 ## Applying to the project
@@ -26,3 +23,14 @@ buildscript() {
 
 apply plugin: "io.spine.tools.gradle.bootstrap"
 ```
+
+## CI/CD
+
+We use GitHub actions to perform automated builds of this repository. Actions that are coming
+from the forked repository are present in the `./github/workflows` directory but manually
+disabled in the settings of the corresponding GitHub [repository][repo-actions].
+This approach is recommended for the forked repositories, see the corresponding
+[documentation][disabling-workflows].
+
+[repo-actions]: https://github.com/Neurogenesio/bootstrap/actions
+[disabling-workflows]: https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow
