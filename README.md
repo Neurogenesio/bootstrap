@@ -30,7 +30,7 @@ We use GitHub actions to perform automated builds of this repository. Actions th
 from the forked repository are present in the `./github/workflows` directory but manually
 disabled in the settings of the corresponding GitHub [repository][repo-actions].
 This approach is recommended for the forked repositories, see the corresponding
-the [documentation][disabling-workflows].
+[documentation][disabling-workflows].
 
 [repo-actions]: https://github.com/Neurogenesio/bootstrap/actions
 [disabling-workflows]: https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow
